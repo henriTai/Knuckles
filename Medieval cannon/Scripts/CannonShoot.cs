@@ -47,12 +47,11 @@ public class CannonShoot : MonoBehaviour {
         {
             untilNextShot -= Time.deltaTime;
         }
-        /* jos implementoi alkukolahduksen
+        // alkukolahdus
         if (Input.GetKeyDown(KeyCode.RightArrow)||Input.GetKeyDown(KeyCode.LeftArrow))
         {
             platformClick.Play();
         }
-        */
 		
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -60,12 +59,11 @@ public class CannonShoot : MonoBehaviour {
             float rot = rotationSpeed * Time.deltaTime;
             currentDirection -= rot;
             platform.transform.Rotate(0f, -rot, 0f);
-            /* ääni kun liikkuu
+            // ääni kun liikkuu
             if (platformMoveSound.isPlaying == false)
             {
                 platformMoveSound.Play();
             }
-            */
 
         }
 
@@ -76,14 +74,14 @@ public class CannonShoot : MonoBehaviour {
             currentDirection += rot;
             platform.transform.Rotate(0f, rot, 0f);
 
-            /* ääni kun liikkuu
+            // ääni kun liikkuu
             if (platformMoveSound.isPlaying == false)
             {
                 platformMoveSound.Play();
             }
-            */
+
         }
-        /* ääni pois
+        // ääni pois
         if ((Input.GetKeyUp(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)) ||
             (Input.GetKeyUp(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow)))
         {
@@ -92,14 +90,12 @@ public class CannonShoot : MonoBehaviour {
                 platformMoveSound.Stop();
             }
         }
-        */
 
-        /* alkukolahdus kun tykki alkaa nousta/laskea
+        // alkukolahdus kun tykki alkaa nousta/laskea
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             startClick.Play();
         }
-        */
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -108,12 +104,12 @@ public class CannonShoot : MonoBehaviour {
                 float rot = barrelSpeed * Time.deltaTime;
                 currentTilt += rot;
                 barrel.transform.Rotate(Vector3.right * rot);
-                /*
+                //
                 if (!gunMoveSound.isPlaying)
                 {
                     gunMoveSound.Play();
                 }
-                */
+
             }
             //tykki ylös
         }
@@ -125,16 +121,15 @@ public class CannonShoot : MonoBehaviour {
                 float rot = barrelSpeed * Time.deltaTime;
                 currentTilt -= rot;
                 barrel.transform.Rotate(Vector3.left * rot);
-                /*
+                //
                 if (!gunMoveSound.isPlaying)
                 {
                     gunMoveSound.Play();
                 }
-                */
             }
         }
 
-        /* audiosourcen pysäytys
+        // audiosourcen pysäytys
         if ((Input.GetKeyUp(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow)) ||
             (Input.GetKeyUp(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow)))
         {
@@ -143,14 +138,13 @@ public class CannonShoot : MonoBehaviour {
                 gunMoveSound.Stop();
             }
         }
-        */
 
         if (Input.GetKeyDown(KeyCode.Space) && untilNextShot<= 0)
         {
             GameObject cb = Instantiate(cannonBall, spawnPoint.transform.position, spawnPoint.transform.rotation);
             Rigidbody rb = cb.GetComponent<Rigidbody>();
             rb.AddForce(spawnPoint.transform.forward * force, ForceMode.Impulse);
-            //shootCannonSound.Play();
+            shootCannonSound.Play();
             untilNextShot = 1f;
         }
 
