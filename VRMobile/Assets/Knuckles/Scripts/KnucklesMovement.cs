@@ -9,6 +9,7 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
     public bool hasRb;
     public bool hasDied;
     public int speed;
+    public int deathCount;
     public Vector3 origPos;
 
     public float respawnDelay;
@@ -37,8 +38,7 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
             respawnDelay -= Time.deltaTime;
             if (respawnDelay <= 0)
             {
-                transform.position = origPos + new Vector3(Random.Range(-25, 25), 0, Random.Range(-25, 25));
-                hasDied = false;
+                Respawn();
             }
             return;
         }
@@ -65,6 +65,23 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
         hasDied = true;
         deathSound.Play();
         respawnDelay = 3f;
+        deathCount++;
+    }
+
+    public void Respawn()
+    {
+        //transform.position = origPos + new Vector3(Random.Range(-25, 25), 0, Random.Range(-25, 25));
+        transform.position = mainCamera.transform.position + new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        Vector3 dir = (gameObject.transform.position - mainCamera.transform.position).normalized;
+        transform.position = mainCamera.transform.position + (dir * 250);
+        hasDied = false;
+
+        if (deathCount > 3)
+        {
+            GameObject clone = Instantiate(gameObject, transform.position, Quaternion.identity);
+            clone.GetComponent<KnucklesMovement>().Respawn();
+            deathCount = 0;
+        }
     }
 
     private void OnCollisionEnter(Collision col) // Huom: kuoleminen vaatii colliderin cannonballille ja knucklesille

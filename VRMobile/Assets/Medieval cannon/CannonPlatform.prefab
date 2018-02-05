@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 33959190811589082}
   - component: {fileID: 65938909907219756}
   - component: {fileID: 23340000903789648}
+  - component: {fileID: 114239661560721450}
   m_Layer: 0
   m_Name: LeftButton
   m_TagString: Untagged
@@ -180,6 +181,7 @@ GameObject:
   - component: {fileID: 33196549227223922}
   - component: {fileID: 65228141936898460}
   - component: {fileID: 23110703437626396}
+  - component: {fileID: 114644932447085534}
   m_Layer: 0
   m_Name: DownButton
   m_TagString: Untagged
@@ -313,6 +315,7 @@ GameObject:
   - component: {fileID: 33171721650280448}
   - component: {fileID: 136871638249718532}
   - component: {fileID: 23651312986533260}
+  - component: {fileID: 114379075051792958}
   m_Layer: 0
   m_Name: FireButton
   m_TagString: Untagged
@@ -366,6 +369,7 @@ GameObject:
   - component: {fileID: 33092885125440258}
   - component: {fileID: 65216921717325218}
   - component: {fileID: 23240042390931030}
+  - component: {fileID: 114264051769603690}
   m_Layer: 0
   m_Name: UpButton
   m_TagString: Untagged
@@ -498,6 +502,7 @@ GameObject:
   - component: {fileID: 33981140361691768}
   - component: {fileID: 65030694935549094}
   - component: {fileID: 23553807228436716}
+  - component: {fileID: 114333305649671122}
   m_Layer: 0
   m_Name: RightButton
   m_TagString: Untagged
@@ -2215,6 +2220,54 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   maxRaycastHits: 64
+--- !u!114 &114239661560721450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241197113229968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a2c083472b53d4986cb6da44eee872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonPlatform: {fileID: 1673074145549248}
+--- !u!114 &114264051769603690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789857303800846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4966e5d028921754cb3829ea5a00e43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonPlatform: {fileID: 1673074145549248}
+--- !u!114 &114333305649671122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992182570987584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718837af12389754db87783a2f4c65bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonPlatform: {fileID: 1673074145549248}
+--- !u!114 &114379075051792958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1746413435008642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb75c46e35982a34b881a8d4b556d58d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonPlatform: {fileID: 1673074145549248}
 --- !u!114 &114509323836533784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2241,6 +2294,11 @@ MonoBehaviour:
   platformClick: {fileID: 82365757496577534}
   platformMoveSound: {fileID: 82451921159916748}
   shootCannonSound: {fileID: 82731209364611924}
+  turnRight: 0
+  turnLeft: 0
+  turnUp: 0
+  turnDown: 0
+  shooting: 0
 --- !u!114 &114516293154053336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2281,6 +2339,18 @@ MonoBehaviour:
   reticleSegments: 20
   reticleGrowthSpeed: 8
   reticleSortingOrder: 32767
+--- !u!114 &114644932447085534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528908284434734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc8ab112446a3d4d864f654b5c3c846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonPlatform: {fileID: 1673074145549248}
 --- !u!114 &114689404952183818
 MonoBehaviour:
   m_ObjectHideFlags: 1

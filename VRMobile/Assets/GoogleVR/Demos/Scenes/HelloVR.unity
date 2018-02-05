@@ -167,6 +167,64 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8524bbe5e592a42dc9251484a73c9c7f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &124201401 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1746413435008642, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+--- !u!114 &124201406 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114379075051792958, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+  m_Script: {fileID: 11500000, guid: bb75c46e35982a34b881a8d4b556d58d, type: 3}
+--- !u!114 &124201407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124201401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 124201406}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 124201406}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &148680882
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +637,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca80f4596fa44b87912a0592346d260, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &500526209 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82744702668861578, guid: ea2d674291697ed4ab4716661cb29fbe,
+    type: 2}
+  m_PrefabInternal: {fileID: 612610451}
 --- !u!1 &525713877
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,41 +733,52 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 15
+      value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
+    - target: {fileID: 4007273813960806, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4577688437726892, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+    - target: {fileID: 82744702668861578, guid: ea2d674291697ed4ab4716661cb29fbe,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114157390165391462, guid: ea2d674291697ed4ab4716661cb29fbe,
+        type: 2}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 500526209}
+    - target: {fileID: 114157390165391462, guid: ea2d674291697ed4ab4716661cb29fbe,
+        type: 2}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
@@ -1690,11 +1764,243 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1500985869 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1992182570987584, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+--- !u!114 &1500985874 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114333305649671122, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+  m_Script: {fileID: 11500000, guid: 718837af12389754db87783a2f4c65bf, type: 3}
+--- !u!114 &1500985875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500985869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1500985874}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1500985874}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1725746395 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1251124450334416, guid: c12db6ac95da443448d6aa9e4cfc66c0,
     type: 2}
   m_PrefabInternal: {fileID: 873428114}
+--- !u!1 &1742990761 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1241197113229968, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+--- !u!114 &1742990766 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114239661560721450, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+  m_Script: {fileID: 11500000, guid: 29a2c083472b53d4986cb6da44eee872, type: 3}
+--- !u!114 &1742990767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742990761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1742990766}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1742990766}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1 &1802076052 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1528908284434734, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+--- !u!114 &1802076057 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114644932447085534, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+  m_Script: {fileID: 11500000, guid: 9cc8ab112446a3d4d864f654b5c3c846, type: 3}
+--- !u!114 &1802076058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1802076052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1802076057}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1802076057}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1 &1825878605 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1789857303800846, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+--- !u!114 &1825878610 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114264051769603690, guid: ab3dc9f17aea79b4a92fa4fc19b38baa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1219991046}
+  m_Script: {fileID: 11500000, guid: 4966e5d028921754cb3829ea5a00e43f, type: 3}
+--- !u!114 &1825878611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825878605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825878610}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825878610}
+          m_MethodName: SetGazedAt
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2100663267 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 632161999, guid: 87c35d808850c410ca0e398a8da84e68,
