@@ -14,6 +14,7 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
 
     public float respawnDelay;
     public AudioSource deathSound;
+    public GameObject loseText;
 
 	// Use this for initialization
 	void Start () {
@@ -28,10 +29,28 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
         origPos = transform.position;
         respawnDelay = 3f;
         deathCount = 0;
+        loseText = GameObject.Find("LoseText");
+        loseText.GetComponent<MeshRenderer>().enabled = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Vector3.Distance(mainCamera.transform.position, gameObject.transform.position) < 3 && !hasDied)
+        {
+            Die();
+            loseText.GetComponent<MeshRenderer>().enabled = true;
+            deathCount = 0;
+
+            GameObject[] knuckleses = GameObject.FindGameObjectsWithTag("Knuckles");
+            foreach (GameObject k in knuckleses)
+            {
+                if (gameObject != k)
+                {
+                    Destroy(k);
+                }
+            }
+        }
 
         if (hasDied)
         {
@@ -66,6 +85,8 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
         hasDied = true;
         deathSound.Play();
         respawnDelay = 3f;
+        Vector3 newRotation = new Vector3(0, 0, 90);
+        transform.RotateAround(transform.position, newRotation, 90);
         deathCount++;
     }
 
@@ -76,6 +97,7 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
         Vector3 dir = (gameObject.transform.position - mainCamera.transform.position).normalized;
         transform.position = mainCamera.transform.position + (dir * 250);
         hasDied = false;
+        loseText.GetComponent<MeshRenderer>().enabled = false;
 
         if (deathCount > 5)
         {
