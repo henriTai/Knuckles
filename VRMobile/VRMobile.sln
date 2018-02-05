@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRMobile", "VRMobile.csproj", "{363D6A90-30D4-4CC4-6186-10C5EE5BCE98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRMobile.Editor", "VRMobile.Editor.csproj", "{97AAEB40-4746-4026-99CC-751EC7F094B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{363D6A90-30D4-4CC4-6186-10C5EE5BCE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363D6A90-30D4-4CC4-6186-10C5EE5BCE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363D6A90-30D4-4CC4-6186-10C5EE5BCE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363D6A90-30D4-4CC4-6186-10C5EE5BCE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AAEB40-4746-4026-99CC-751EC7F094B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AAEB40-4746-4026-99CC-751EC7F094B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AAEB40-4746-4026-99CC-751EC7F094B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AAEB40-4746-4026-99CC-751EC7F094B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
