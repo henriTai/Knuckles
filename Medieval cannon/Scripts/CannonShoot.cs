@@ -26,11 +26,21 @@ public class CannonShoot : MonoBehaviour {
     public AudioSource platformClick; // kun lavetti alkaa kääntyä
     public AudioSource platformMoveSound; // kun lavetti kääntyy
     public AudioSource shootCannonSound; //
+    public bool turnRight;
+    public bool turnLeft;
+    public bool turnUp;
+    public bool turnDown;
+    public bool shooting;
 
 	void Start () {
         currentTilt = 0f;
         untilNextShot = 0f;
         currentDirection = 0f;
+        turnRight = false;
+        turnLeft = false;
+        turnUp = false;
+        turnDown = false;
+        shooting = false;
 	}
 
 	void Update () {
@@ -53,7 +63,7 @@ public class CannonShoot : MonoBehaviour {
             platformClick.Play();
         }
 		
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.LeftArrow)||turnLeft==true)
         {
             //käänny oikeaan
             float rot = rotationSpeed * Time.deltaTime;
@@ -67,7 +77,7 @@ public class CannonShoot : MonoBehaviour {
 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.RightArrow)||turnRight == true)
         {
             //käänny vasempaan
             float rot = rotationSpeed * Time.deltaTime;
@@ -97,7 +107,7 @@ public class CannonShoot : MonoBehaviour {
             startClick.Play();
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow)||turnUp)
         {
             if (currentTilt < maxBarrelTilt)
             {
@@ -113,7 +123,7 @@ public class CannonShoot : MonoBehaviour {
             }
             //tykki ylös
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow)||turnDown)
         {
             //tykki alas
             if (currentTilt > minBarrelTilt)
@@ -139,14 +149,30 @@ public class CannonShoot : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && untilNextShot<= 0)
+        if ((Input.GetKeyDown(KeyCode.Space)||shooting) && untilNextShot<= 0)
         {
             GameObject cb = Instantiate(cannonBall, spawnPoint.transform.position, spawnPoint.transform.rotation);
             Rigidbody rb = cb.GetComponent<Rigidbody>();
             rb.AddForce(spawnPoint.transform.forward * force, ForceMode.Impulse);
             shootCannonSound.Play();
-            untilNextShot = 1f;
+            untilNextShot = shotInterval;
         }
 
 	}
+
+    public void StopPlMoveSound()
+    {
+        if (platformMoveSound.isPlaying)
+        {
+            platformMoveSound.Stop();
+        }
+    }
+
+    public void StopGunMoveSound()
+    {
+        if (gunMoveSound.isPlaying)
+        {
+            gunMoveSound.Stop();
+        }
+    }
 }
