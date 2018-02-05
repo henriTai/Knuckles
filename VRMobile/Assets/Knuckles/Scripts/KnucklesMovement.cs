@@ -27,6 +27,7 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
 
         origPos = transform.position;
         respawnDelay = 3f;
+        deathCount = 0;
     }
 	
 	// Update is called once per frame
@@ -76,11 +77,11 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
         transform.position = mainCamera.transform.position + (dir * 250);
         hasDied = false;
 
-        if (deathCount > 3)
+        if (deathCount > 5)
         {
+            deathCount = 0;
             GameObject clone = Instantiate(gameObject, transform.position, Quaternion.identity);
             clone.GetComponent<KnucklesMovement>().Respawn();
-            deathCount = 0;
         }
     }
 
