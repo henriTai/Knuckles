@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 95478099933821096}
   - component: {fileID: 114357464505921456}
   - component: {fileID: 136899776656937406}
-  - component: {fileID: 114079798348396720}
+  - component: {fileID: 114136917178872328}
   - component: {fileID: 82417509998366644}
   m_Layer: 0
   m_Name: Knuckles
@@ -1951,7 +1951,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2079,7 +2079,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114079798348396720
+--- !u!114 &114136917178872328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2087,17 +2087,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1917294678945686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d8777ac6ad06d4a9952682829315d7, type: 3}
+  m_Script: {fileID: 11500000, guid: bf3c2dcd5567c534dbb1610eb00a33eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 0000d10c34f0cec4f84659fa5ce56413, type: 3}
-  - {fileID: 8300000, guid: b788d0a59d9f309498192a616b69daa3, type: 3}
-  - {fileID: 8300000, guid: f2b0945f75dd86b4aaa998f0ad58d667, type: 3}
-  - {fileID: 8300000, guid: 5d974db8aaf94664ea4c44c1f1a25e45, type: 3}
-  - {fileID: 8300000, guid: 2bed968b4c2a64d43ae769e839852a41, type: 3}
-  - {fileID: 8300000, guid: 5d9f348efceb82d4fa9639c25e62e98e, type: 3}
-  - {fileID: 8300000, guid: 92d3e5a4d03d9c74ab3b57cf7ac4dd09, type: 3}
+  - {fileID: 8300000, guid: 27c891b38e24df94dbba66f569a87b51, type: 3}
+  - {fileID: 8300000, guid: 7464109deecfd0542ad4e4d592537f18, type: 3}
+  - {fileID: 8300000, guid: f8cec29f7cbeb1c47bb6df0dd14201a4, type: 3}
+  - {fileID: 8300000, guid: d89221da6b2c0a94995d2ae6910b341f, type: 3}
+  - {fileID: 8300000, guid: 2d89fedff388e734ea4fb8d472c66ef7, type: 3}
+  - {fileID: 8300000, guid: c82ecf61ca2bc7f4d8eb557921adda30, type: 3}
 --- !u!114 &114357464505921456
 MonoBehaviour:
   m_ObjectHideFlags: 1
