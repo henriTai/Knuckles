@@ -1754,6 +1754,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82417509998366644, guid: ea2d674291697ed4ab4716661cb29fbe,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82417509998366644, guid: ea2d674291697ed4ab4716661cb29fbe,
+        type: 2}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 82417509998366644, guid: ea2d674291697ed4ab4716661cb29fbe,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea2d674291697ed4ab4716661cb29fbe, type: 2}
   m_IsPrefabParent: 0
