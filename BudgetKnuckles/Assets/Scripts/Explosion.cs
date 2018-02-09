@@ -20,6 +20,7 @@ public class Explosion : MonoBehaviour {
         Vector3 targetDir = mainCamera.transform.position - transform.position;
         float step = 200 * Time.deltaTime;
         Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+        //newDir += new Vector3(90, 180, 0);
         transform.rotation = Quaternion.LookRotation(newDir);
 
         transform.Translate(0, +lift*Time.deltaTime, 0);
