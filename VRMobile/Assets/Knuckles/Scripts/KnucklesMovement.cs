@@ -98,8 +98,9 @@ public class KnucklesMovement: MonoBehaviour { // Liitä Knucklesiin
         transform.position = mainCamera.transform.position + (dir * 250);
         hasDied = false;
         loseText.GetComponent<MeshRenderer>().enabled = false;
+        GameObject[] knuckleses = GameObject.FindGameObjectsWithTag("Knuckles");
 
-        if (deathCount > 5)
+        if (deathCount > 4 && knuckleses.Length < 3)
         {
             deathCount = 0;
             GameObject clone = Instantiate(gameObject, transform.position, Quaternion.identity);
